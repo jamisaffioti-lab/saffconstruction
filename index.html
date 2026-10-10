@@ -109,6 +109,14 @@
   .card .num{font-family:var(--mono);font-size:.8rem;color:var(--signal);letter-spacing:.1em;font-weight:700}
   .card h3{font-family:var(--display);font-weight:700;font-size:1.24rem;margin:13px 0 9px;text-transform:uppercase;letter-spacing:.005em;line-height:1.12}
   .card p{color:#4a443e;font-size:.95rem;line-height:1.58}
+  .scope{margin-top:clamp(40px,5vw,60px);border-top:1px solid var(--rule);padding-top:clamp(30px,4vw,44px)}
+  .scope-head{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--steel);margin-bottom:28px;display:flex;align-items:center;gap:.7em;flex-wrap:wrap}
+  .scope-head .bm{color:var(--signal)}
+  .scope-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(26px,3vw,44px)}
+  .scope-col h4{font-family:var(--display);font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--signal)}
+  .scope-col ul{list-style:none}
+  .scope-col li{font-size:.92rem;color:#4a443e;padding:6px 0;border-bottom:1px solid var(--rule);line-height:1.4}
+  .scope-col li:last-child{border-bottom:0}
 
   /* group (coastal sub-sections) */
   .group{margin-top:clamp(44px,6vw,72px)}
@@ -296,6 +304,54 @@
           <div class="card reveal"><span class="num">05</span><h3>Storm &amp; Wind Damage Repair</h3><p>When hurricanes and severe storms hit, we stabilize the structure first, then rebuild it right — emergency dry-in through full structural repair for homes and businesses across South Florida.</p></div>
           <div class="card reveal"><span class="num">06</span><h3>Sustainable Building — LEED v5</h3><p>Design and construction aligned with LEED v5, the current green-building standard — building toward lower-carbon, healthier, more resilient homes and facilities.</p></div>
         </div>
+        <div class="scope reveal">
+          <div class="scope-head"><span class="bm">▽</span> Full scope — from conceptual design to fine finishes, under one license</div>
+          <div class="scope-groups">
+            <div class="scope-col">
+              <h4>Design &amp; Visualization</h4>
+              <ul>
+                <li>Conceptual design</li>
+                <li>CAD &amp; 3D renderings</li>
+                <li>ADA &amp; accessibility</li>
+              </ul>
+            </div>
+            <div class="scope-col">
+              <h4>Millwork &amp; Fine Finishes</h4>
+              <ul>
+                <li>Custom cabinetry &amp; millwork</li>
+                <li>Stairs &amp; built-in furniture</li>
+                <li>Coffered ceilings &amp; groin arches</li>
+                <li>Illuminated trace crowns</li>
+                <li>Circular &amp; radius walls &amp; ceilings</li>
+                <li>Live walls</li>
+                <li>Authentic natural materials &amp; artisan work</li>
+                <li>Motor coach, yacht &amp; trailer millwork</li>
+              </ul>
+            </div>
+            <div class="scope-col">
+              <h4>Storm &amp; Structural Protection</h4>
+              <ul>
+                <li>Cyclonic &amp; tornadic protection</li>
+                <li>Impact &amp; non-impact shutters</li>
+                <li>House elevating &amp; anchoring</li>
+                <li>Stormwater diverting &amp; erosion control</li>
+                <li>Intumescent fire-barrier sealants</li>
+                <li>Dismantle &amp; retro-fit</li>
+              </ul>
+            </div>
+            <div class="scope-col">
+              <h4>Specialty Spaces &amp; Access</h4>
+              <ul>
+                <li>Safe rooms, vaults &amp; secure storage</li>
+                <li>Mechanic pits &amp; root cellars</li>
+                <li>Accessory buildings &amp; pole barns</li>
+                <li>LULA elevators &amp; dumbwaiters</li>
+                <li>Elevated elements &amp; kiosks</li>
+                <li>Service areas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -394,9 +450,9 @@
           <p class="lede">Tell us what you're building or protecting. We take on a limited number of projects to keep the standard where it belongs.</p>
           <div class="contact-lines">
             <!-- EDIT: replace phone (tel: link and visible text) -->
-            <a class="cline" href="tel:850-730-5192  "><span class="lbl">Phone</span><span class="val">(850) 730‑5192</span></a>
+            <a class="cline" href="tel:+10000000000"><span class="lbl">Phone</span><span class="val">(000) 000‑0000</span></a>
             <!-- EDIT: replace email (mailto: link and visible text) -->
-            <a class="cline" href="mailto:saffyachty@gmail.com"><span class="lbl">Email</span><span class="val">saffyachty@gmail.com</span></a>
+            <a class="cline" href="mailto:hello@saffioti.example"><span class="lbl">Email</span><span class="val">hello@saffioti.example</span></a>
             <!-- EDIT: replace with your real service area -->
             <div class="cline"><span class="lbl">Service area</span><span class="val">Florida &amp; New Jersey</span></div>
           </div>
@@ -614,7 +670,7 @@
   var form=document.getElementById('contact-form');
   form.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var to='saffyachty@gmail.com'; // EDIT: inquiries go here
+    var to='hello@saffioti.example'; // EDIT: inquiries go here
     var name=(document.getElementById('name').value||'').trim();
     var email=(document.getElementById('email').value||'').trim();
     var phone=(document.getElementById('phone').value||'').trim();
