@@ -63,6 +63,13 @@
   .nav-links a:hover,.nav-links a.active{opacity:1}
   .call-btn{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;background:var(--signal);color:#fff!important;opacity:1!important;padding:9px 16px;border-radius:2px;font-weight:500;transition:background .2s}
   .call-btn:hover{background:var(--signal-deep)}
+  .topbar{background:var(--ink);color:var(--paper)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+  .topbar .lic{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#B7B0A5}
+  .topbar .tb-contact{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+  .topbar a{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em;text-decoration:none;color:var(--paper);display:inline-flex;align-items:center;gap:7px;transition:color .2s}
+  .topbar a:hover{color:var(--signal)}
+  .topbar a .ic{color:var(--signal);font-size:.95em}
   .burger{display:none;background:none;border:0;cursor:pointer;padding:8px;flex-direction:column;gap:5px}
   .burger span{display:block;width:24px;height:2px;background:var(--ink);transition:transform .25s,opacity .2s}
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -220,6 +227,9 @@
   }
   @media (max-width:680px){
     .cards,.cards.three{grid-template-columns:1fr}
+    .topbar .wrap{justify-content:center}
+    .topbar .lic{display:none}
+    .topbar .tb-contact{gap:16px}
     .nav-links{position:fixed;inset:68px 0 auto 0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--rule);padding:8px 0;transform:translateY(-120%);transition:transform .3s ease;align-items:stretch}
     .nav-links.open{transform:translateY(0)}
     .nav-links a{padding:16px clamp(20px,5vw,56px);opacity:1;border-top:1px solid var(--rule)}
@@ -234,6 +244,16 @@
 </head>
 <body id="top">
 
+<div class="topbar">
+  <div class="wrap">
+    <span class="lic">Licensed CBC1252361</span>
+    <div class="tb-contact">
+      <a href="tel:+12392411641" aria-label="Call Saffioti"><span class="ic">✆</span>(239) 241-1641</a>
+      <a href="mailto:info@builtbysaffioti.com"><span class="ic">✉</span>info@builtbysaffioti.com</a>
+    </div>
+  </div>
+</div>
+
 <header id="site-header">
   <div class="wrap nav">
     <a class="brand" href="#home" data-nav aria-label="Saffioti home">
@@ -244,7 +264,7 @@
       <a href="#work" data-nav>Construction</a>
       <a href="#coastal" data-nav>Coastal &amp; Environmental</a>
       <a href="#contact" data-nav>Contact</a>
-      <a class="call-btn" href="#contact" data-nav>Call the shop</a>
+      <a class="call-btn" href="tel:+12392411641">✆ (239) 241-1641</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span><span></span>
@@ -449,11 +469,8 @@
           <h2>Let's talk about<br>your project.</h2>
           <p class="lede">Tell us what you're building or protecting. We take on a limited number of projects to keep the standard where it belongs.</p>
           <div class="contact-lines">
-            <!-- EDIT: replace phone (tel: link and visible text) -->
-            <a class="cline" href="tel:+18507305192"><span class="lbl">Phone</span><span class="val">(850) 730‑5192</span></a>
-            <!-- EDIT: replace email (mailto: link and visible text) -->
-            <a class="cline" href="mailto:saffyachty@gmail.com"><span class="lbl">Email</span><span class="val">saffyachty@gmail.com</span></a>
-            <!-- EDIT: replace with your real service area -->
+            <a class="cline" href="tel:+12392411641"><span class="lbl">Phone</span><span class="val">(239) 241-1641</span></a>
+            <a class="cline" href="mailto:info@builtbysaffioti.com"><span class="lbl">Email</span><span class="val">info@builtbysaffioti.com</span></a>
             <div class="cline"><span class="lbl">Service area</span><span class="val">Florida &amp; New Jersey</span></div>
           </div>
           <div class="cred">
@@ -670,7 +687,7 @@
   var form=document.getElementById('contact-form');
   form.addEventListener('submit',function(ev){
     ev.preventDefault();
-    var to='saffyachty@gmail.com'; // EDIT: inquiries go here
+    var to='info@builtbysaffioti.com'; // inquiries go here
     var name=(document.getElementById('name').value||'').trim();
     var email=(document.getElementById('email').value||'').trim();
     var phone=(document.getElementById('phone').value||'').trim();
